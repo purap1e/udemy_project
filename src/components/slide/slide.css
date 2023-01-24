@@ -1,0 +1,43 @@
+.container {
+    width: 1500px;
+    height: 100%;
+}
+.slide--img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.slider {
+    display: flex;
+    background-image: url("http://localhost:3000/imgs/img2.png");
+    height: 400px;
+    width: 1340px;
+    align-items: center;
+    margin: auto;
+}
+/*bdd3cc*/
+/*efc8c8*/
+/*2a2539*/
+/*eae9e5*/
+/*c5afff*/
+
+.card {
+    margin-left: 60px;
+    background: #FFF;
+    width: 440px;
+    height: 180px;
+}
+.img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.title {
+    font-size: 34px;
+    font-weight: bold;
+    padding: 10px 10px;
+}
+.subtitle {
+    font-size: 18px;
+    padding: 10px 10px;
+}

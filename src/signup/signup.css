@@ -1,0 +1,21 @@
+.button-signup {
+    width: 100%;
+    background-color: #a435f0;
+    height: 3.8rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    color: #FFF;
+    font-size: 18px;
+    font-weight: bold;
+
+    transition: opacity .1s linear;
+}
+.button-signup:hover {
+    opacity: .8;
+}
+button {
+    border: none;
+    cursor: pointer;
+}

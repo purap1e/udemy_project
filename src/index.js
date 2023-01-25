@@ -9,10 +9,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 axios.interceptors.request.use(
     config => {
-        // LocalStorageService.clear(ACCESS_TOKEN_KEY);
-        const token = LocalStorageService.get(ACCESS_TOKEN_KEY);
-        if (token) {
-            config.headers['Authorization'] = 'Bearer ' + token
+        if (!config.url.endsWith("/signup")) {
+            const token = LocalStorageService.get(ACCESS_TOKEN_KEY);
+            if (token) {
+                config.headers['Authorization'] = 'Bearer ' + token
+            }
         }
         return config
     },

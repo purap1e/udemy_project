@@ -1,9 +1,12 @@
-import React, {Component, useState} from 'react'
+import React, {useState} from 'react'
 import './signup.css'
 import AuthService from '../services/AuthService'
+import { useNavigate } from "react-router-dom";
+
 
 const SignUp = () => {
 
+    const navigate = useNavigate();
     const [name, setName] = useState();
     const [username, setUsername] = useState();
     const [password, setPassword] = useState();
@@ -13,10 +16,9 @@ const SignUp = () => {
         e.preventDefault();
         const user = {name,username,password};
         AuthService.signup(user).then(res => {
-            // console.log(data);
-            // console.log("Congratulations!");
-            // console.log(res.data);
+            navigate("/login");
         });
+
     }
 
     return (

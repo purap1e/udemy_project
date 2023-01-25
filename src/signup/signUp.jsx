@@ -28,19 +28,37 @@ const SignUp = () => {
             <br/>
 
             <form>
-                <div className="input-group">
-                    <input type="text" name="name" onChange={(e) => setName(e.target.value)}/>
-                    <label>Full Name</label>
+                <div className="form">
+                    <input type="text"
+                           id="name"
+                           value={name}
+                           className="form__input"
+                           autoComplete="off"
+                           placeholder=" "
+                           onChange={(e) => setName(e.target.value)}/>
+                    <label className="form__label"  htmlFor="name">Full Name</label>
                 </div>
 
-                <div className="input-group">
-                    <input type="text" name="username" onChange={(e) => setUsername(e.target.value)}/>
-                    <label>Username</label>
+                <div className="form">
+                    <input type="text"
+                           id="username"
+                           value={username}
+                           className="form__input"
+                           autoComplete="off"
+                           placeholder=" "
+                           onChange={(e) => setUsername(e.target.value)}/>
+                    <label className="form__label"  htmlFor="username">Username</label>
                 </div>
 
-                <div className="input-group">
-                    <input type="text" name="password" onChange={(e) => setPassword(e.target.value)}/>
-                    <label>Password</label>
+                <div className="form">
+                    <input type="password"
+                           id="password"
+                           value={password}
+                           className="form__input"
+                           autoComplete="off"
+                           placeholder=" "
+                           onChange={(e) => setPassword(e.target.value)}/>
+                    <label className="form__label"  htmlFor="password">Password</label>
                 </div>
 
                 <button className="button-signup" onClick={(e) => handleSubmit(e)}>

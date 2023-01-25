@@ -7,7 +7,7 @@ const Login = () => {
 
     const [username,setUsername] = useState();
     const [password,setPassword] = useState();
-
+    
     const handleSubmit = e => {
         e.preventDefault();
         const data = {username,password};
@@ -35,19 +35,26 @@ const Login = () => {
             </div>
 
            <form>
-               <div className="input-group">
-                   <input type="text"
-                          name="username"
+               <div className="form">
+                   <input type="text" 
+                          id="username"
                           value={username}
+                          className="form__input"
+                          autoComplete="off"
+                          placeholder=" "
                           onChange={(e) => setUsername(e.target.value)}/>
-                   <label>Email</label>
+                   <label className="form__label"  htmlFor="username">Username</label>
                </div>
-               <div className="input-group">
-                   <input type="text"
-                          name="password"
+
+               <div className="form">
+                   <input type="password" 
+                          id="password"
                           value={password}
+                          className="form__input"
+                          autoComplete="off"
+                          placeholder=" "
                           onChange={(e) => setPassword(e.target.value)}/>
-                   <label>Password</label>
+                   <label className="form__label"  htmlFor="password">Password</label>
                </div>
 
                <button className="button-signup" onClick={(e) => handleSubmit(e)}>
